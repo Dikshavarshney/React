@@ -1,0 +1,48 @@
+import React from 'react'
+
+const Listing = () => {
+    
+    // ---------------------------------ARRAY-------------------------------------------------------
+    
+    
+    let langs = ["Dot.Net","React","next JS","Java","Python"];
+  
+
+    // ---------------------------------------------------------------------------------------------------
+        /*to rendering data from internet
+
+                ~ array ([])-> presentation;
+                ~ object   ({})-> presentation;
+
+            */
+    // ------------------------------------OBJECT------------------------------------------------------
+      
+    let langsObj = [
+            { id: "1", lang: "Dot.Net"},
+            { id: "2", lang: "React"},
+            { id: "3", lang: "next JS"},
+            { id: "4", lang: "Java"},
+            { id: "5", lang: "Python"},
+        ];
+
+  return (
+    <div>
+        
+        <h1>List of Languages by Array </h1>   
+            <ul>
+                {langs.map((lang,index) => ( 
+                                <li key = {index} >{lang}</li>)
+                 )}         
+            </ul>
+
+        <h1>Listing of Languages by object</h1>
+        <ul>
+            {langsObj.map((obj) =>( 
+                               <li style = {{textAlign : "left"}} key = {obj.id}>{obj.lang}
+                               </li>))}
+        </ul>                
+    </div>
+  )
+};
+
+export default Listing;
